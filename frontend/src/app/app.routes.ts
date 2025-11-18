@@ -15,7 +15,6 @@ export const routes: Routes = [{path: 'login', component: HomeComponent},
   component: LayoutComponent,
   canActivate: [authGuard],
   children: [
-     //{path:'', component: LandingComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'room/create', component: RoomComponent},
     { path: 'room/:roomName', component: ChatRoomComponent }
