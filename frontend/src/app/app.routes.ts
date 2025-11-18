@@ -6,7 +6,7 @@ import {LayoutComponent} from "./Components/layout/layout.component";
 import {authGuard} from "./auth/auth.guard";
 import {AuthCallBackComponent} from "./auth/AuthCallBack/auth-call-back/auth-call-back.component";
 import {ChatRoomComponent} from "./Components/chatRoom/chatRoom.component";
-import {LandingComponent} from "./Components/landing/landing/landing.component";
+
 
 
 export const routes: Routes = [{path: 'login', component: HomeComponent},
@@ -15,7 +15,7 @@ export const routes: Routes = [{path: 'login', component: HomeComponent},
   component: LayoutComponent,
   canActivate: [authGuard],
   children: [
-     {path:'', component: LandingComponent},
+     //{path:'', component: LandingComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'room/create', component: RoomComponent},
     { path: 'room/:roomName', component: ChatRoomComponent }

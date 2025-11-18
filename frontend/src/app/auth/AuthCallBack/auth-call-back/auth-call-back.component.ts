@@ -17,7 +17,7 @@ export class AuthCallBackComponent implements OnInit {
     const token = this.route.snapshot.queryParamMap.get('token');
     if (token) {
       this.authService.login(token);
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
     } else {
       this.router.navigate(['/login']);
     }
