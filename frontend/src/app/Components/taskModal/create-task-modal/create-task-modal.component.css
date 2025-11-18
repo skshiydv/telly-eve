@@ -1,0 +1,176 @@
+/* --- Global Scrollbar Styles --- */
+/* This will style all scrollbars in the application for a consistent look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* The track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f8f9fa; /* A very light gray to match the page background */
+}
+
+/* The draggable handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #dee2e6; /* A slightly darker gray for the handle */
+  border-radius: 10px;
+  border: 2px solid #f8f9fa; /* Creates a nice padding effect */
+}
+
+/* The handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ced4da; /* Darkens the handle on hover */
+}
+
+
+/* --- Sidebar Styles --- */
+/* This is the main container for your entire sidebar */
+.sidenav-container {
+  height: 100%;
+  background-color: #ffffff;
+  padding: 16px;
+  border-right: 1px solid #dee2e6;
+  font-family: 'Poppins', sans-serif; /* Assuming Poppins font */
+}
+
+/* The list that holds all navigation items */
+.sidenav-container .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between links */
+}
+
+/* General style for all links (the <a> tags) */
+.sidenav-container li a {
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Style specifically for the main "Dashboard" link's h2 */
+.sidenav-container li a h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  padding: 12px 16px;
+}
+
+/* Style specifically for the room name links' p tags */
+.sidenav-container li a p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #495057;
+  margin: 0;
+  padding: 10px 16px;
+}
+
+/* The visual feedback when a user hovers over any link */
+.sidenav-container li a:hover {
+  background-color: #f8f9fa;
+}
+
+/* The style for the currently active link */
+.sidenav-container li a.active {
+  background-color: #000000;
+}
+
+/* When a link is active, the text inside it becomes white */
+.sidenav-container li a.active h2,
+.sidenav-container li a.active p {
+  color: #ffffff;
+}
+
+/* --- NEW: Form Styles (Themed) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* This container is designed for a modal/dialog */
+.create-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* General styles for all form fields */
+.create-form-container input[type="text"],
+.create-form-container input[type="date"],
+.create-form-container select {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  color: #212529;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Select dropdown specific styling */
+.create-form-container select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+
+/* Focus state for form fields */
+.create-form-container input[type="text"]:focus,
+.create-form-container input[type="date"]:focus,
+.create-form-container select:focus {
+  border-color: #e85d04; /* Orange accent on focus */
+  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.15);
+}
+
+/* Placeholder text styling */
+.create-form-container input::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+/* Date picker icon styling */
+.create-form-container input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.create-form-container input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Submit button styling */
+.submit-btn {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #343a40;
+}

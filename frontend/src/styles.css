@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html, body {
+  height: 100%;
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* The track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f8f9fa; /* A very light gray to match the page background */
+}
+
+/* The draggable handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #dee2e6; /* A slightly darker gray for the handle */
+  border-radius: 10px;
+  border: 2px solid #f8f9fa; /* Creates a nice padding effect */
+}
+/* The handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ced4da; /* Darkens the handle on hover */
+}
+
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

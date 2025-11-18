@@ -1,0 +1,16 @@
+<div class="create-form-container">
+  <div class="input-area">
+    <div>
+      <input [(ngModel)]="taskName" type="text" placeholder="Enter task name...">
+    </div>
+    <div>
+      <input [(ngModel)]="deadLine" type="date">
+    </div>
+    <div>
+      <select [(ngModel)]="assignedTo" type="text">
+        <option *ngFor="let user of Users" [value]="user.email">{{user.username}}</option>
+      </select>
+    </div>
+  </div>
+  <button (click)="createTask()" class="submit-btn">Create Task</button>
+</div>

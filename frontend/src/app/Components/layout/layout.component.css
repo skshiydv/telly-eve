@@ -1,0 +1,23 @@
+.mat-sidenav-container {
+  /* The container itself should have the main background */
+
+  background-color: transparent;
+  height: 100vh;
+}
+
+/* --- Sidenav (The Sidebar Itself) --- */
+.mat-sidenav {
+  width: 260px; /* A fixed, generous width for the sidebar */
+  background-color: #1a1a2e; /* Sidebar's distinct background */
+  border-right: 1px solid #2a2a4a;
+  scrollbar-width: none;
+  box-shadow: none !important;
+}
+.mat-sidenav-content {
+  background-color: #12121f;
+}
+
+.main-content {
+
+  padding: 32px;
+}

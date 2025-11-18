@@ -1,0 +1,60 @@
+# Angular build outputs
+dist/
+camelot/
+tmp/
+out-tsc/
+
+# Angular cache
+.angular/
+.angular/cache/
+
+
+# Node modules
+node_modules/
+
+# Environment files (IMPORTANT)
+src/environments/environment.ts
+src/environments/environment.prod.ts
+*.env
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Debug Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional caches
+.npm/
+.yarn/
+.pnpm-store/
+.cache/
+
+# Angular test outputs
+coverage/
+
+# Lock files (Optional: remove if you want them tracked)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Production build (if you deploy through GitHub Pages build)
+docs/
+
+# Misc
+*.iml
+*.log
+
+
+.editorconfig

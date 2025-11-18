@@ -1,0 +1,13 @@
+<div *ngIf="currentUser$ | async as user" class="welcome-container">
+  <div class="welcome-content">
+
+<!--    <img [src]="" [alt]="user.name" class="welcome-avatar">-->
+
+    <h1>Welcome, {{ user.name }}!</h1>
+
+    <p>Getting your workspace ready...</p>
+
+    <div class="spinner"></div>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="chat-container">
+  <!-- Header -->
+  <div class="chat-header">
+    <div class="left">
+      <h2>{{ roomName }}</h2>
+      <p>Logged in as: <span class="username">{{ currentUsername?.username }}</span></p>
+    </div>
+    <div class="right">
+      <button (click)="leaveRoom()" class="btn">
+        Leave group
+      </button>
+      <button (click)="openDialog()" class="btn">Assign Task</button>
+    </div>
+
+
+  </div>
+
+  <!-- Message Display Area -->
+  <div class="message-area" #messageContainer>
+    <div *ngFor="let msg of messages" class="message-wrapper" [class.own-message-wrapper]="msg.isOwnMessage">
+      <div class="message-bubble" [class.own-message]="msg.isOwnMessage">
+        <div *ngIf="!msg.isOwnMessage" class="sender-name">{{ msg.sender }}</div>
+        <div class="message-content">{{ msg.message }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Input Form -->
+  <div class="message-input-area">
+    <input
+      type="text"
+      class="message-input"
+      placeholder="Type a message..."
+      [(ngModel)]="newMessage"
+      (keyup.enter)="sendMessage()"
+    />
+    <button class="send-button" (click)="sendMessage()" [disabled]="!newMessage.trim()">
+      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </button>
+  </div>
+</div>
